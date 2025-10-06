@@ -72,7 +72,7 @@ const Header = () => {
 
           {/* CTA Button */}
           <motion.a
-            href="/ZakariaZaroual.pdf"
+            href="/ZakariaZaroualCv.pdf"
             download
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -110,7 +110,7 @@ const Header = () => {
                 </button>
               ))}
               <a
-                href="/ZakariaZaroual.pdf"
+                href="/ZakariaZaroualCv.pdf"
                 download
                 className="flex items-center space-x-2 py-2 px-4 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors"
               >
