@@ -160,7 +160,7 @@ const Hero = () => {
               Découvrir mon profil
             </motion.button>
             <motion.a
-              href="/ZakariaZaroualCv.pdf"
+              href="/components/ZakariaZaroualCv.pdf"
               download
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}

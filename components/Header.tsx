@@ -110,7 +110,7 @@ const Header = () => {
                 </button>
               ))}
               <a
-                href="/ZakariaZaroualCv.pdf"
+                href="/components/ZakariaZaroualCv.pdf"
                 download
                 className="flex items-center space-x-2 py-2 px-4 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors"
               >
