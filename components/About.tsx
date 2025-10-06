@@ -1,48 +1,58 @@
-'use client'
+"use client";
 
-import { motion } from 'framer-motion'
-import { useInView } from 'react-intersection-observer'
-import { GraduationCap, Briefcase, Code, Globe, Users, Award } from 'lucide-react'
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import {
+  GraduationCap,
+  Briefcase,
+  Code,
+  Globe,
+  Users,
+  Award,
+} from "lucide-react";
+
+const email = process.env.NEXT_PUBLIC_EMAIL;
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
 const About = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
-  })
+  });
 
   const stats = [
-    { icon: GraduationCap, label: 'Formation', value: 'UTT - Ingénieur' },
-    { icon: Briefcase, label: 'Expérience', value: '6 mois' },
-    { icon: Code, label: 'Projets', value: '10+' },
-    { icon: Globe, label: 'Langues', value: '4' },
-  ]
+    { icon: GraduationCap, label: "Formation", value: "UTT - Ingénieur" },
+    { icon: Briefcase, label: "Expérience", value: "6 mois" },
+    { icon: Code, label: "Projets", value: "10+" },
+    { icon: Globe, label: "Langues", value: "4" },
+  ];
 
   const achievements = [
     {
       icon: Award,
-      title: 'PSPO I',
-      description: 'Professional Scrum Product Owner™ I',
-      color: 'bg-blue-500'
+      title: "PSPO I",
+      description: "Professional Scrum Product Owner™ I",
+      color: "bg-blue-500",
     },
     {
       icon: Code,
-      title: 'Full Stack',
-      description: 'Développement complet d\'applications',
-      color: 'bg-green-500'
+      title: "Full Stack",
+      description: "Développement complet d&apos;applications",
+      color: "bg-green-500",
     },
     {
       icon: Globe,
-      title: 'International',
-      description: 'Expérience au Vietnam (Polaris Edge)',
-      color: 'bg-purple-500'
+      title: "International",
+      description: "Expérience au Vietnam (Polaris Edge)",
+      color: "bg-purple-500",
     },
     {
       icon: Users,
-      title: 'Collaboration',
-      description: 'Travail en équipe et gestion de projets',
-      color: 'bg-orange-500'
+      title: "Collaboration",
+      description: "Travail en équipe et gestion de projets",
+      color: "bg-orange-500",
     },
-  ]
+  ];
 
   return (
     <section id="about" className="py-20 bg-white dark:bg-slate-800">
@@ -59,8 +69,9 @@ const About = () => {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-black to-gray-500 mx-auto mb-8"></div>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Passionné par le développement et l'innovation technologique, 
-            je suis actuellement étudiant en dernière année d'ingénierie informatique à l'UTT.
+            Passionné par le développement et l&apos;innovation technologique,
+            je suis actuellement étudiant en dernière année d&apos;ingénierie
+            informatique à l&apos;UTT.
           </p>
         </motion.div>
 
@@ -84,7 +95,8 @@ const About = () => {
                       Université de Technologie de Troyes (UTT)
                     </h4>
                     <p className="text-gray-600 dark:text-gray-300">
-                      Diplôme d'Ingénieur Informatique et Systèmes d'Information (2023-2026)
+                      Diplôme d&apos;Ingénieur Informatique et Systèmes
+                      d&apos;Information (2023-2026)
                     </p>
                   </div>
                 </div>
@@ -107,9 +119,11 @@ const About = () => {
                 Objectif professionnel
               </h3>
               <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                À la recherche d'un <strong>stage de fin d'études</strong> en tant qu'ingénieur 
-                pour une durée de <strong>six mois</strong>, à partir de <strong>février 2026</strong>. 
-                Je souhaite mettre à profit mes compétences techniques et mon expérience 
+                À la recherche d&apos;un{" "}
+                <strong>stage de fin d&apos;études</strong> en tant
+                qu&apos;ingénieur pour une durée de <strong>six mois</strong>, à
+                partir de <strong>février 2026</strong>. Je souhaite mettre à
+                profit mes compétences techniques et mon expérience
                 internationale pour contribuer à des projets innovants.
               </p>
             </div>
@@ -180,9 +194,7 @@ const About = () => {
           transition={{ duration: 0.6, delay: 1.4 }}
           className="mt-16 bg-gradient-to-r from-black to-gray-800 rounded-2xl p-8 text-white text-center"
         >
-          <h3 className="text-2xl font-bold mb-4">
-            Prêt à collaborer ?
-          </h3>
+          <h3 className="text-2xl font-bold mb-4">Prêt à collaborer&nbsp;?</h3>
           <p className="text-lg mb-6 opacity-90">
             Contactez-moi pour discuter de votre projet ou de votre stage.
           </p>
@@ -194,16 +206,24 @@ const About = () => {
               +33 6 98 32 16 09
             </a>
             <a
-              href="mailto:zakaria.zaroual@utt.fr"
+              href={`mailto:${email}`}
               className="bg-white/20 backdrop-blur-sm border border-white/30 text-white px-6 py-3 rounded-lg hover:bg-white/30 transition-colors duration-200 font-medium"
             >
-              zakaria.zaroual@utt.fr
+              {email}
             </a>
+          </div>
+          <div className="mt-4">
+            <p>
+              Site web&nbsp;:{" "}
+              <a href={baseUrl} className="underline">
+                {baseUrl}
+              </a>
+            </p>
           </div>
         </motion.div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default About
+export default About;
