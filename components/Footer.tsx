@@ -1,33 +1,39 @@
-'use client'
+"use client";
 
-import { motion } from 'framer-motion'
-import { Linkedin, Mail, Heart, ArrowUp } from 'lucide-react'
+import { motion } from "framer-motion";
+import { Linkedin, Mail, Heart, ArrowUp } from "lucide-react";
+
+const email = process.env.NEXT_PUBLIC_EMAIL;
 
 const Footer = () => {
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' })
-  }
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   const socialLinks = [
-    { icon: Linkedin, href: 'https://www.linkedin.com/in/zakaria-zaroual-4626b526a/', label: 'LinkedIn' },
-    { icon: Mail, href: 'mailto:zakaria.zaroual@utt.fr', label: 'Email' },
-  ]
+    {
+      icon: Linkedin,
+      href: "https://www.linkedin.com/in/zakaria-zaroual-4626b526a/",
+      label: "LinkedIn",
+    },
+    { icon: Mail, href: `mailto:${email}`, label: "Email" },
+  ];
 
   const quickLinks = [
-    { name: 'À propos', href: '#about' },
-    { name: 'Expérience', href: '#experience' },
-    { name: 'Projets', href: '#projects' },
-    { name: 'Compétences', href: '#skills' },
-    { name: 'Contact', href: '#contact' },
-  ]
+    { name: "À propos", href: "#about" },
+    { name: "Expérience", href: "#experience" },
+    { name: "Projets", href: "#projects" },
+    { name: "Compétences", href: "#skills" },
+    { name: "Contact", href: "#contact" },
+  ];
 
-  const currentYear = new Date().getFullYear()
+  const currentYear = new Date().getFullYear();
 
   return (
     <footer className="bg-gray-900 text-white relative">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center opacity-5"></div>
-      
+
       <div className="relative z-10">
         {/* Main Footer Content */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -46,20 +52,23 @@ const Footer = () => {
                 <h3 className="text-2xl font-bold">Zakaria Zaroual</h3>
               </div>
               <p className="text-gray-300 mb-6 max-w-md leading-relaxed">
-                Étudiant en informatique à l'UTT, passionné par le développement full stack 
-                et à la recherche d'un stage de fin d'études en tant qu'ingénieur.
+                Étudiant en informatique à l&apos;UTT, passionné par le
+                développement full stack et à la recherche d&apos;un stage de
+                fin d&apos;études en tant qu&apos;ingénieur.
               </p>
-              
+
               {/* Contact Info */}
               <div className="space-y-2">
                 <p className="text-gray-300">
-                  <span className="font-medium">Email:</span> zakaria.zaroual@utt.fr
+                  <span className="font-medium">Email:</span> {email}
                 </p>
                 <p className="text-gray-300">
-                  <span className="font-medium">Téléphone:</span> +33 6 98 32 16 09
+                  <span className="font-medium">Téléphone:</span> +33 6 98 32 16
+                  09
                 </p>
                 <p className="text-gray-300">
-                  <span className="font-medium">Localisation:</span> Troyes, France
+                  <span className="font-medium">Localisation:</span> Troyes,
+                  France
                 </p>
               </div>
             </motion.div>
@@ -108,7 +117,7 @@ const Footer = () => {
                   </motion.a>
                 ))}
               </div>
-              
+
               {/* Resume Download */}
               <div className="mt-6">
                 <motion.a
@@ -137,7 +146,7 @@ const Footer = () => {
               >
                 © {currentYear} Zakaria Zaroual. Tous droits réservés.
               </motion.p>
-              
+
               <motion.p
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
@@ -167,7 +176,7 @@ const Footer = () => {
         </motion.button>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
