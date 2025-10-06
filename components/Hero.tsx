@@ -55,9 +55,11 @@ const Hero = () => {
             className="mb-8"
           >
             <div className="w-32 h-32 mx-auto bg-gradient-to-br from-gray-800 to-black dark:from-gray-200 dark:to-white rounded-full p-1 shadow-2xl">
-              <div className="w-full h-full bg-white dark:bg-gray-900 rounded-full flex items-center justify-center text-4xl font-bold text-gray-800 dark:text-gray-200">
-                ZZ
-              </div>
+              <img
+                src="/porto.jpg"
+                alt="Zakaria Zaroual"
+                className="w-full h-full object-cover rounded-full"
+              />
             </div>
           </motion.div>
 

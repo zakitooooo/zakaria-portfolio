@@ -37,7 +37,7 @@ const About = () => {
     {
       icon: Code,
       title: "Full Stack",
-      description: "Développement complet d&apos;applications",
+      description: "Développement complet des applications",
       color: "bg-green-500",
     },
     {
