@@ -121,7 +121,7 @@ const Footer = () => {
               {/* Resume Download */}
               <div className="mt-6">
                 <motion.a
-                  href="/components/ZakariaZaroualCv.pdf"
+                  href="/ZakariaZaroualCv.pdf"
                   download
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
