@@ -1,79 +1,79 @@
-'use client'
+"use client";
 
-import { motion } from 'framer-motion'
-import { useInView } from 'react-intersection-observer'
-import { Code, Database, Cloud, Globe, Users, Award, Star } from 'lucide-react'
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { Code, Database, Cloud, Globe, Users, Award, Star } from "lucide-react";
 
 const Skills = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
-  })
+  });
 
   const skillCategories = [
     {
-      title: 'Frontend',
+      title: "Frontend",
       icon: Code,
-      color: 'from-gray-600 to-gray-800',
+      color: "from-gray-600 to-gray-800",
       skills: [
-        { name: 'React', level: 90, years: '2+' },
-        { name: 'TypeScript', level: 85, years: '2+' },
-        { name: 'HTML5', level: 95, years: '3+' },
-        { name: 'CSS3', level: 90, years: '3+' },
-        { name: 'Bootstrap', level: 80, years: '2+' },
-      ]
+        { name: "React", level: 90, years: "2+" },
+        { name: "TypeScript", level: 85, years: "2+" },
+        { name: "HTML5", level: 95, years: "3+" },
+        { name: "CSS3", level: 90, years: "3+" },
+        { name: "Bootstrap", level: 80, years: "2+" },
+      ],
     },
     {
-      title: 'Backend',
+      title: "Backend",
       icon: Database,
-      color: 'from-gray-600 to-gray-800',
+      color: "from-gray-600 to-gray-800",
       skills: [
-        { name: 'Java', level: 85, years: '3+' },
-        { name: 'Spring Boot', level: 80, years: '2+' },
-        { name: 'PHP', level: 75, years: '2+' },
-        { name: 'MySQL', level: 85, years: '3+' },
-        { name: 'PDO', level: 80, years: '2+' },
-      ]
+        { name: "Java", level: 85, years: "3+" },
+        { name: "Spring Boot", level: 80, years: "2+" },
+        { name: "PHP", level: 75, years: "2+" },
+        { name: "MySQL", level: 85, years: "3+" },
+        { name: "PDO", level: 80, years: "2+" },
+      ],
     },
     {
-      title: 'Cloud & DevOps',
+      title: "Cloud & DevOps",
       icon: Cloud,
-      color: 'from-gray-600 to-gray-800',
+      color: "from-gray-600 to-gray-800",
       skills: [
-        { name: 'AWS Lambda', level: 75, years: '1+' },
-        { name: 'AWS S3', level: 80, years: '1+' },
-        { name: 'Serverless', level: 70, years: '1+' },
-        { name: 'CI/CD', level: 75, years: '1+' },
-        { name: 'Docker', level: 60, years: '1' },
-      ]
+        { name: "AWS Lambda", level: 75, years: "1+" },
+        { name: "AWS S3", level: 80, years: "1+" },
+        { name: "Serverless", level: 70, years: "1+" },
+        { name: "CI/CD", level: 75, years: "1+" },
+        { name: "Docker", level: 60, years: "1" },
+      ],
     },
     {
-      title: 'Data Science',
+      title: "Data Science",
       icon: Globe,
-      color: 'from-gray-600 to-gray-800',
+      color: "from-gray-600 to-gray-800",
       skills: [
-        { name: 'Python', level: 85, years: '2+' },
-        { name: 'Pandas', level: 80, years: '2+' },
-        { name: 'NumPy', level: 75, years: '2+' },
-        { name: 'Scikit-learn', level: 70, years: '1+' },
-        { name: 'Machine Learning', level: 70, years: '1+' },
-      ]
-    }
-  ]
+        { name: "Python", level: 85, years: "2+" },
+        { name: "Pandas", level: 80, years: "2+" },
+        { name: "NumPy", level: 75, years: "2+" },
+        { name: "Scikit-learn", level: 70, years: "1+" },
+        { name: "Machine Learning", level: 70, years: "1+" },
+      ],
+    },
+  ];
 
   const methodologies = [
-    { name: 'MVC Architecture', level: 85 },
-    { name: 'Scrum', level: 80 },
-    { name: 'Gestion de Projets', level: 75 },
-    { name: 'Travail en Équipe', level: 90 },
-  ]
+    { name: "MVC Architecture", level: 85 },
+    { name: "Scrum", level: 80 },
+    { name: "Gestion de Projets", level: 75 },
+    { name: "Travail en Équipe", level: 90 },
+  ];
 
   const languages = [
-    { name: 'Français', level: 100, flag: '🇫🇷' },
-    { name: 'Anglais', level: 85, flag: '🇬🇧' },
-    { name: 'Arabe', level: 100, flag: '🇲🇦' },
-    { name: 'Italien', level: 60, flag: '🇮🇹' },
-  ]
+    { name: "Français", level: 100, flag: "🇫🇷" },
+    { name: "Anglais", level: 85, flag: "🇬🇧" },
+    { name: "Arabe", level: 100, flag: "🇲🇦" },
+    { name: "Italien", level: 60, flag: "🇮🇹" },
+  ];
 
   return (
     <section id="skills" className="py-20 bg-gray-50 dark:bg-slate-900">
@@ -90,8 +90,8 @@ const Skills = () => {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-black to-gray-500 mx-auto mb-8"></div>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Un aperçu de mes compétences techniques et générales, 
-            acquises au fil de mes expériences académiques et professionnelles.
+            Un aperçu de mes compétences techniques et générales, acquises au
+            fil de mes expériences académiques et professionnelles.
           </p>
         </motion.div>
 
@@ -106,7 +106,9 @@ const Skills = () => {
               className="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300"
             >
               <div className="flex items-center space-x-4 mb-6">
-                <div className={`w-12 h-12 bg-gradient-to-r ${category.color} rounded-xl flex items-center justify-center`}>
+                <div
+                  className={`w-12 h-12 bg-gradient-to-r ${category.color} rounded-xl flex items-center justify-center`}
+                >
                   <category.icon className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
@@ -120,7 +122,10 @@ const Skills = () => {
                     key={skill.name}
                     initial={{ opacity: 0, y: 10 }}
                     animate={inView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ duration: 0.4, delay: 0.2 + skillIndex * 0.1 }}
+                    transition={{
+                      duration: 0.4,
+                      delay: 0.2 + skillIndex * 0.1,
+                    }}
                   >
                     <div className="flex justify-between items-center mb-2">
                       <div className="flex items-center space-x-2">
@@ -140,7 +145,10 @@ const Skills = () => {
                         className={`h-2 bg-gradient-to-r ${category.color} rounded-full`}
                         initial={{ width: 0 }}
                         animate={inView ? { width: `${skill.level}%` } : {}}
-                        transition={{ duration: 1, delay: 0.5 + skillIndex * 0.1 }}
+                        transition={{
+                          duration: 1,
+                          delay: 0.5 + skillIndex * 0.1,
+                        }}
                       />
                     </div>
                   </motion.div>
@@ -169,7 +177,10 @@ const Skills = () => {
             </div>
             <div className="space-y-3">
               {methodologies.map((method, index) => (
-                <div key={method.name} className="flex items-center justify-between">
+                <div
+                  key={method.name}
+                  className="flex items-center justify-between"
+                >
                   <span className="text-gray-700 dark:text-gray-300">
                     {method.name}
                   </span>
@@ -180,8 +191,8 @@ const Skills = () => {
                         size={12}
                         className={`${
                           i < Math.floor(method.level / 20)
-                            ? 'text-yellow-400 fill-current'
-                            : 'text-gray-300 dark:text-gray-600'
+                            ? "text-yellow-400 fill-current"
+                            : "text-gray-300 dark:text-gray-600"
                         }`}
                       />
                     ))}
@@ -208,7 +219,10 @@ const Skills = () => {
             </div>
             <div className="space-y-3">
               {languages.map((lang, index) => (
-                <div key={lang.name} className="flex items-center justify-between">
+                <div
+                  key={lang.name}
+                  className="flex items-center justify-between"
+                >
                   <div className="flex items-center space-x-2">
                     <span className="text-lg">{lang.flag}</span>
                     <span className="text-gray-700 dark:text-gray-300">
@@ -257,7 +271,7 @@ const Skills = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Skills
+export default Skills;
