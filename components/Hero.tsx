@@ -179,19 +179,7 @@ const Hero = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 1.2 }}
           className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-        >
-          <motion.button
-            onClick={scrollToNext}
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-            className="p-2 rounded-full bg-white dark:bg-slate-800 shadow-lg hover:shadow-xl transition-all duration-200"
-          >
-            <ChevronDown
-              size={24}
-              className="text-gray-600 dark:text-gray-300"
-            />
-          </motion.button>
-        </motion.div>
+        ></motion.div>
       </div>
     </section>
   );
